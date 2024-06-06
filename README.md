@@ -1,17 +1,33 @@
-# Arduino
+# <span style="color: #FDFD96;">Arduino</span>
 
-Arduino es una plataforma de prototipado electrónico de código abierto basada en hardware y software fáciles de usar. Está compuesto por una serie de placas de desarrollo (hardware) que tienen un microcontrolador y un entorno de desarrollo integrado (IDE) que se utiliza para escribir y cargar código en las placas.
+Arduino es una plataforma de código abierto de prototipos electrónicos que se basa en hardware y software flexibles y fáciles de usar que ponen al alcance de cualquier persona la construcción de circuitos electrónicos.
 
-### <span style="color: #5F9EA0;">Componentes Principales de Arduino:</span>
+### <span style="color: #5F9EA0;">Componentes Principales de Arduino</span>
 
 <span style="color: #B2A4D4;">**Placas de Desarrollo:**</span>
-Hay varios modelos de placas Arduino, como el Arduino Uno, Arduino Mega, y Arduino Nano, entre otros. Cada placa tiene diferentes características y capacidades, pero todas permiten la programación y el control de circuitos electrónicos.
+Hay varios modelos de placas Arduino, como el Arduino Uno, Arduino Mega, y Arduino Nano, entre otros. Cada una de las placas lleva un microcontrolador en el que se carga el programa que se quiera ejecutar.
 
 <span style="color: #B2A4D4;">**Microcontrolador:**</span>
-Es el cerebro de la placa Arduino. Cada placa tiene un microcontrolador específico que ejecuta el código cargado desde el IDE de Arduino.
+Es el cerebro de la placa Arduino. Es donde la placa almacena el programa que tiene que ejecutar.
+
+El microcontrolador de la placa se programa utilizando el IDE de Arduino.
 
 <span style="color: #B2A4D4;">**Entradas y Salidas (I/O):**</span>
 Las placas Arduino tienen pines de entrada y salida digital y analógica que permiten la interacción con sensores, actuadores y otros componentes electrónicos.
 
 <span style="color: #B2A4D4;">**IDE de Arduino:**</span>
 El Entorno de Desarrollo Integrado de Arduino es una aplicación que se utiliza para escribir, compilar y cargar programas en las placas Arduino. Utiliza un lenguaje de programación basado en C/C++.
+
+![EsquemaArduino](image1.png)
+
+### <span style="color: #5F9EA0;">IDE de Arduino</span>
+
+<span style="color: #B2A4D4;">**Estructura de un programa**</span>
+
+El programa en Arduino está compuesto por dos secciones diferentes y obligatorias en las que se codifican diferentes componentes del programa.
+
+![IDEArduino](image2.png)
+
+En la primera sección del programa, <span style="color: #FDFD96;">**setup()**</span>, es donde se define la configuración del programa, es decir, donde se codifican todas las sentencias de configuración, inicialización de los puertos de la placa, configuración de las comunicaciones y otros parámetros que dependerán de cada programa que se desarrolle.
+
+En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</span>, es donde se codifica el programa que se ejecutará de forma cíclica en Arduino. Esta sección está compuesta por todas las sentencias que componen el programa y que llevarán a cabo todas las operaciones que lo compongan.
