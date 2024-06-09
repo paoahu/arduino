@@ -22,6 +22,12 @@ El Entorno de Desarrollo Integrado de Arduino es una aplicación que se utiliza 
 
 ### <span style="color: #5F9EA0;">Componentes comunes en los montajes</span>
 
+<span style="color: #B2A4D4;">**Cables:**</span> usaremos cables macho-hembra, macho-macho o hembra-hembra en función de lo que necesitemos conectar en cada proyecto.
+
+<span style="color: #B2A4D4;">**Resistencia:**</span> es un pequeño componente que se utiliza para limitar o controlar la cantidad de corriente eléctrica que fluye a través de un circuito.
+
+<span style="color: #B2A4D4;">**Led:**</span> es dispositivo que emite luz cuando se encuentra en polarización directa, es decir el ánodo (pata larga) está conectado a un polo positivo y la pata corta (cátodo) a un polo negativo.
+
 <span style="color: #B2A4D4;">**Protoboard:**</span>
 Es una placa de plástico con contactos metálicos que nos permite montar circuitos eléctricos y electrónicos de manera fácil, temporal y sin tener que soldar.
 
@@ -38,6 +44,8 @@ No importa si la resistencia está conectada antes de la carga negativa o de la 
 ![IDEArduino](image5.png)
 
 Sí que es importante hacer las conexiones en los agujeros correctos. Si conectamos la carga negativa de la pila en el canal de - de protoboard, no podemos conectar la resistencia o el cátodo al + del protoboard.
+
+Existen <span style="color: #B2A4D4;">**otros componentes**</span> como <span style="color: #FDFD96;">**potenciómetro, zumbador, sensor de humedad, de temperatura, sensor de luz, ultrasonidos, patalla...**</span>
 
 ### <span style="color: #5F9EA0;">IDE de Arduino</span>
 
