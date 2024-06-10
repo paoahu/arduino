@@ -58,3 +58,12 @@ El programa en Arduino está compuesto por dos secciones diferentes y obligatori
 En la primera sección del programa, <span style="color: #FDFD96;">**setup()**</span>, es donde se define la configuración del programa, es decir, donde se codifican todas las sentencias de configuración, inicialización de los puertos de la placa, configuración de las comunicaciones y otros parámetros que dependerán de cada programa que se desarrolle.
 
 En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</span>, es donde se codifica el programa que se ejecutará de forma cíclica en Arduino. Esta sección está compuesta por todas las sentencias que componen el programa y que llevarán a cabo todas las operaciones que lo compongan.
+
+<span style="color: #B2A4D4;">**Hello World**</span>
+
+![IDEArduino](image6.png)
+
+- setup(): Configura el pin 7 como una salida.
+- loop(): Hace que el LED conectado al pin 7 parpadee. Primero, enciende el LED y espera 1 segundo, luego apaga el LED y espera otro segundo. Este ciclo se repite indefinidamente.
+
+<span style="color: #FDFD96;">**digitalWrite**</span>, <span style="color: #FDFD96;">**pinMode**</span> o <span style="color: #FDFD96;">**delay**</span> son funciones predefinidas que forman parte de la biblioteca de Arduino.
