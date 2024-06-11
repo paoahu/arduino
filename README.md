@@ -63,7 +63,9 @@ En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</s
 
 ![IDEArduino](image6.png)
 
-- setup(): Configura el pin 7 como una salida.
-- loop(): Hace que el LED conectado al pin 7 parpadee. Primero, enciende el LED y espera 1 segundo, luego apaga el LED y espera otro segundo. Este ciclo se repite indefinidamente.
+- <span style="color: #FDFD96;">**setup()**</span>: Configura el pin 7 como una salida.
+- <span style="color: #FDFD96;">**loop()**</span>: Hace que el LED conectado al pin 7 parpadee. Primero, enciende el LED y espera 1 segundo, luego apaga el LED y espera otro segundo. Este ciclo se repite indefinidamente.
 
 <span style="color: #FDFD96;">**digitalWrite**</span>, <span style="color: #FDFD96;">**pinMode**</span> o <span style="color: #FDFD96;">**delay**</span> son funciones predefinidas que forman parte de la biblioteca de Arduino.
+
+/// Insatlar johnny-five // firmata
