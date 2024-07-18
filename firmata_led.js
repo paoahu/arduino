@@ -5,7 +5,7 @@ const { Board, Led } = require("johnny-five");
 const board = new Board();
 
 board.on("ready", () => {
-    const led = new Led(13);
+    const led = new Led(7);
 
     // This will grant access to the led instance
     // from within the REPL that's created when
