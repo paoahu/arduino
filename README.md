@@ -1,6 +1,6 @@
 # <span style="color: #FDFD96;">Arduino</span>
 
-Arduino es una plataforma de código abierto de prototipos electrónicos que se basa en hardware y software flexibles y fáciles de usar que ponen al alcance de cualquier persona la construcción de circuitos electrónicos.
+Arduino es una plataforma de prototipos (está diseñado para que los usuarios creen y experimenten con ideas antes de implementar un producto final) de código abierto. Se basa en hardware y software flexibles y fáciles de usar que ponen al alcance de cualquier persona la construcción de circuitos electrónicos.
 
 ### <span style="color: #5F9EA0;">Componentes Principales de Arduino</span>
 
@@ -53,13 +53,30 @@ Existen <span style="color: #B2A4D4;">**otros componentes**</span> como <span st
 
 El programa en Arduino está compuesto por dos secciones diferentes y obligatorias en las que se codifican diferentes componentes del programa.
 
+https://support.arduino.cc/hc/en-us/articles/360019833020-Download-and-install-Arduino-IDE
+
+
 ![IDEArduino](image2.png)
 
-En la primera sección del programa, <span style="color: #FDFD96;">**setup()**</span>, es donde se define la configuración del programa, es decir, donde se codifican todas las sentencias de configuración, inicialización de los puertos de la placa, configuración de las comunicaciones y otros parámetros que dependerán de cada programa que se desarrolle.
+Arduino utiliza un lenguaje llamado C/C++, la palabra clave que se utiliza para definir las funciones (que no retornan nada) es void. Para usar funciones que retornan algún valor se usa la tipología del valor que devuelven. 
 
-En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</span>, es donde se codifica el programa que se ejecutará de forma cíclica en Arduino. Esta sección está compuesta por todas las sentencias que componen el programa y que llevarán a cabo todas las operaciones que lo compongan.
+```cpp
+int suma(int a, int b) {
+    return a + b;
+}
+```
+
+
+
+En la primera sección del programa, <span style="color: #FDFD96;">**setup()**</span>, es donde se define la configuración del programa, es decir, donde se codifican todas las sentencias de configuración, inicialización de los puertos de la placa, configuración de las comunicaciones y otros parámetros que dependerán de cada programa que se desarrolle. "Definimos los actores"
+
+En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</span>, es donde se codifica el programa que se ejecutará de forma cíclica en Arduino. Esta sección está compuesta por todas las sentencias que componen el programa y que llevarán a cabo todas las operaciones que lo compongan. "Se desarrollan las acciones"
 
 <span style="color: #B2A4D4;">**Hello World**</span>
+
+<span style="color: #FDFD96;">**pinMode(pin, mode)**</span> es una función reservada en Arduino. Se utiliza para configurar un pin específico de la placa de Arduino como una entrada o una salida. 
+
+<span style="color: #FDFD96;">**digitalWrite(pin, value)**</span> es otra función reservada en Arduino. Se utiliza para escribir un valor (alto o bajo) en un pin digital que haya sido configurado previamente como salida usando pinMode(). 
 
 ![IDEArduino](image6.png)
 
@@ -68,4 +85,38 @@ En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</s
 
 <span style="color: #FDFD96;">**digitalWrite**</span>, <span style="color: #FDFD96;">**pinMode**</span> o <span style="color: #FDFD96;">**delay**</span> son funciones predefinidas que forman parte de la biblioteca de Arduino.
 
-/// Insatlar johnny-five // firmata
+
+### <span style="color: #5F9EA0;">JOHNNY-FIVE + FIRMATA</span>
+
+
+
+<span style="color: #FDFD96;">**Johnny-Five**</span> es una biblioteca de JavaScript que permite controlar y programar hardware (como placas de Arduino) usando JavaScript. 
+
+<span style="color: #FDFD96;">**Firmata**</span> es un protocolo de comunicación que permite a un ordenador comunicarse y controlar una placa Arduino (u otro microcontrolador) desde otro software, como Johnny-Five. 
+
+<span style="color: #B2A4D4;">**Cargar Firmata en Arduino**</span>
+
+![IDEArduino](image7.png)
+
+<span style="color: #B2A4D4;">**Hello World con Johnny-Five**</span>
+
+Johnny-Five es una biblioteca que trabaja mejor con CommonJS se puede trabajar con ECMAScript 6 (ES6), pero la mayoría de ejemplos que vamos a encontrar aún usan require. 
+
+(Tenemos que tener instalado Node.js)
+
+
+https://johnny-five.io/
+
+
+** Si hemos clonado el repositorio, es posible que tenga una versión antigua de node **
+
+```cpp
+npm rebuild // recopilamos los módulos nativos
+rm -rf node_modules // eliminamos las dependencias instaladas
+npm intall // reinstalamos desde 0 con nuestra versión de node
+npm install johnny-five // instalamos johnny-five
+```
+
+<span style="color: #B2A4D4;">**Traffic Lights con Johnny-Five**</span>
+
+https://johnny-five.io/examples/
