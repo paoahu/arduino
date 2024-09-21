@@ -85,6 +85,8 @@ En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</s
 
 <span style="color: #FDFD96;">**digitalWrite**</span>, <span style="color: #FDFD96;">**pinMode**</span> o <span style="color: #FDFD96;">**delay**</span> son funciones predefinidas que forman parte de la biblioteca de Arduino.
 
+![IDEArduino](image10.png)
+
 
 ### <span style="color: #5F9EA0;">JOHNNY-FIVE + FIRMATA</span>
 
@@ -101,6 +103,8 @@ En la segunda sección del programa, <span style="color: #FDFD96;">**loop()**</s
 <span style="color: #B2A4D4;">**Hello World con Johnny-Five**</span>
 
 Johnny-Five es una biblioteca que trabaja mejor con CommonJS se puede trabajar con ECMAScript 6 (ES6), pero la mayoría de ejemplos que vamos a encontrar aún usan require. 
+
+![IDEArduino](image9.png)
 
 (Tenemos que tener instalado Node.js)
 
@@ -119,4 +123,58 @@ npm install johnny-five // instalamos johnny-five
 
 <span style="color: #B2A4D4;">**Traffic Lights con Johnny-Five**</span>
 
+![IDEArduino](image8.png)
+
 https://johnny-five.io/examples/
+
+
+<span style="color: #B2A4D4;">**Servo Motor**</span>
+Es un dispositivo que permite controlar la posición y movimientos de su eje. Se puede mover en un ángulo (0-180), posición y a una velocidad determinada. Tiene 3 pines: alimentación (5V), tierra (GND) y el pin de la señal.
+
+https://johnny-five.io/examples/servo/
+
+
+![IDEArduino](image11.png)
+
+### <span style="color: #5F9EA0;">DIGITAL MEASURING</span>
+
+El <span style="color: #FDFD96;">**Arduino Nano**</span> es una versión compacta del Arduino Uno, está pensado para proyectos de espacio reducido. Al Arduino Nano se le puede acoplar un <span style="color: #FDFD96;">**Shield**</span> de expansión, que proporciona un mejor acceso a los pines y facilita la conexión.
+
+![IDEArduino](image14.png)
+
+Trabajaremos con Arduino Nano + Shield para poder conectar fácilmente diversos dipositivos. 
+
+![IDEArduino](image15.png)
+
+Para usar esta placa con Johnny-Five, también tenemos que cargar la librería Firmata. Pero en este caso, añadiremos la librería PingFirmata para poder usar el sensor ultrasónico.
+
+<span style="color: #B2A4D4;">**Hello ISDI con Johnny-Five**</span>
+
+Vamos a trabajar con <span style="color: #FDFD96;">**El monitor LCD 16x2 con interfaz I2C**</span>, un componente popular en proyectos de Arduino. Ofrece la posibilidad de mostrar hasta 16 caracteres en 2 filas (16 columnas, 2 filas).
+
+La interfaz I2C permite la comunicación entre el microcontrolador y el LCD usando sólo 2 cables para la comunicación de datos: SDA (transmisión de datos) y SCL (sincronización del reloj de la comunicación). Son necesarios también los cables de alimentación (GND y 5V).
+
+https://johnny-five.io/examples/lcd-i2c/
+
+
+Vemos que no se indica en qué pines se tiene que conectar SDA y SCL es porque por defecto, se colocan el SDA en el pin A4 y el SCL en el pin A5.
+
+![IDEArduino](image13.png)
+
+
+<span style="color: #B2A4D4;">**Proximity HCSR04 con Johnny-Five**</span>
+
+El sensor de proximidad <span style="color: #FDFD96;">**HC-SR04**</span> se usa para medir distancias. Funciona emitiendo pulsos de ultrasonido y midiendo el tiempo que tarda en rebotar en un objeto y volver al sensor. Así el sensor, puede calcular la distancia que hay entre el sensor y ese objeto. 
+
+Los pines del sensor son: VCC (alimentación - 5V), GND (tierra), TRIG (inicia la medición, se envía un pulso alto de 10 microsegundos) y ECHO (pin de salida que recibe el eco y se pone alto en función del tiempo que tarda el sonido en regresar)
+
+Para poder usar este sensor con Johnny-Five, tenemos que cargar la librería PingFirmata y hacer un puente entre TRIG y ECHO, ya que se controla en un mismo pin.
+
+https://johnny-five.io/examples/proximity-hcsr04/
+
+
+![IDEArduino](image16.png)
+
+<span style="color: #B2A4D4;">**Monitor + HCSR04 con Johnny-Five**</span>
+
+![IDEArduino](image17.png)
