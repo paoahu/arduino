@@ -178,3 +178,6 @@ https://johnny-five.io/examples/proximity-hcsr04/
 <span style="color: #B2A4D4;">**Monitor + HCSR04 con Johnny-Five**</span>
 
 ![IDEArduino](image17.png)
+
+
+### <span style="color: #5F9EA0;">FINAL PRACTICE</span>
